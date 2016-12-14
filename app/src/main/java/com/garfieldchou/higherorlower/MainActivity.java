@@ -14,7 +14,8 @@ public class MainActivity extends AppCompatActivity {
     public void numGuess (View view) {
         Log.i("Info", "Guess button was clicked !");
         EditText guessEditText = (EditText) findViewById(R.id.guessEditText);
-        Log.i("Info", "guess number: " + guessEditText.getText().toString());
+        int guessInt = Integer.parseInt(guessEditText.getText().toString());
+        Log.i("Info", "guess number: " + guessInt);
         Random r = new Random();
         int numToGuess = r.nextInt(20 - 1) + 1 ;
         Log.i("Info", "number to guess: " + numToGuess) ;
