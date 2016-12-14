@@ -37,14 +37,14 @@
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
-        android:id="@+id/editText"
+        android:id="@+id/guessEditText"
         android:hint="Enter a number between 1 and 20" />
 
     <Button
         android:text="Guess"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/guessEditText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:id="@+id/button"
