@@ -32,13 +32,13 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
         android:ems="10"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
         android:id="@+id/guessEditText"
-        android:hint="Enter a number between 1 and 20" />
+        android:hint="Enter a number between 1 and 20"
+        android:inputType="number" />
 
     <Button
         android:text="Guess"
