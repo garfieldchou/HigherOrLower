@@ -12,14 +12,13 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+    public int numToGuess;
+
     public void numGuess (View view) {
         Log.i("Info", "Guess button was clicked !");
         EditText guessEditText = (EditText) findViewById(R.id.guessEditText);
         int guessInt = Integer.parseInt(guessEditText.getText().toString());
         Log.i("Info", "guess number: " + guessInt);
-        Random r = new Random();
-        int numToGuess = r.nextInt(20 - 1) + 1 ;
-        Log.i("Info", "number to guess: " + numToGuess) ;
 
         if ( guessInt == numToGuess) {
             Toast.makeText(MainActivity.this, "Hit!", Toast.LENGTH_LONG).show();
@@ -34,5 +33,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Random r = new Random();
+        numToGuess = r.nextInt(20 - 1) + 1 ;
+        Log.i("Info", "number to guess: " + numToGuess) ;
     }
 }
