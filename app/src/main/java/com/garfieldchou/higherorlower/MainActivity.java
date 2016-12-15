@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Random r = new Random();
-        numToGuess = r.nextInt(20 - 1) + 1 ;
+        numToGuess = r.nextInt(20) + 1 ;
         Log.i("Info", "number to guess: " + numToGuess) ;
     }
 }
