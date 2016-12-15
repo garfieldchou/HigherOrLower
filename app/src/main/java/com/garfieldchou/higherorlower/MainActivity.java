@@ -12,7 +12,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    public int numToGuess;
+    int numToGuess;
 
     public void numGuess (View view) {
         Log.i("Info", "Guess button was clicked !");
@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
         if ( guessInt == numToGuess) {
             Toast.makeText(MainActivity.this, "Hit!", Toast.LENGTH_LONG).show();
+            Random r = new Random();
+            numToGuess = r.nextInt(20) + 1 ;
         } else if ( guessInt > numToGuess ) {
             Toast.makeText(MainActivity.this, "Higher, try a lower one !", Toast.LENGTH_LONG).show();
         } else {
